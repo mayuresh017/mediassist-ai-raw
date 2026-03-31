@@ -1,0 +1,15 @@
+Changes added:
+1. Chat history system with multiple saved chat sessions.
+2. New Chat button.
+3. Delete individual chat session.
+4. Clear current chat button.
+5. Previous old single-chat localStorage data auto-migrates into the new history system.
+6. Basic Health Study button with beginner-friendly health learning cards.
+
+Note:
+- Chat history is saved in browser localStorage for this frontend.
+- If frontend build gives optional dependency/native binding error, run:
+  cd frontend
+  rm -rf node_modules package-lock.json
+  npm install
+  npm run dev

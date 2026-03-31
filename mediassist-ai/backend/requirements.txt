@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+deep-translator
+pymongo
+passlib[bcrypt]
+python-jose
+pydantic
+email-validator
+python-multipart

@@ -1,0 +1,31 @@
+Added skin image upload + AI skin scan feature.
+
+Backend changes:
+- Added backend/app/routes/skin_routes.py
+- Added analyze_skin_image() in backend/app/services/ai_service.py
+- Updated backend/app/main.py to include /api/skin-scan route
+- Added python-multipart in backend/requirements.txt
+
+Frontend changes:
+- Updated frontend/src/App.jsx
+- Added skin image upload card with preview, notes field, and scan button
+- Sends uploaded image to backend /api/skin-scan and shows result in chat cards
+
+Important:
+- Skin scan uses your OpenRouter API key.
+- Recommended env vars:
+  OPENROUTER_API_KEY=your_key
+  OPENROUTER_MODEL=openai/gpt-4o-mini
+  OPENROUTER_VISION_MODEL=openai/gpt-4o-mini
+
+Run after extracting:
+1. Backend:
+   pip install -r requirements.txt
+   uvicorn app.main:app --reload
+2. Frontend:
+   npm install
+   npm run dev
+
+Note:
+- Python backend files were syntax-checked successfully.
+- Frontend build was not fully verified inside this environment because the uploaded node_modules had a missing Linux optional dependency. Running npm install in your frontend folder should fix that.

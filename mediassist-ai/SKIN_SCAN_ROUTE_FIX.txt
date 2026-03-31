@@ -1,0 +1,17 @@
+Skin scan route fix applied.
+
+What was fixed:
+- Frontend now tries both /api/skin-scan and /skin-scan
+- Frontend now tries both /api/chat and /chat
+- Backend exposes duplicate aliases for chat and skin scan routes
+- Added configurable frontend API base with VITE_API_BASE_URL
+
+If you still see Not Found:
+1. Stop backend server
+2. Extract this updated zip
+3. Open terminal in backend folder
+4. Run: pip install -r requirements.txt
+5. Run: uvicorn app.main:app --reload
+6. Open http://127.0.0.1:8000/docs
+7. Check that POST /api/skin-scan is visible
+8. Then run frontend with npm install and npm run dev
